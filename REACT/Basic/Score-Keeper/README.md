@@ -26,16 +26,19 @@ A simple React application for keeping track of scores in multiplayer games. Bui
 ### Installation
 
 1. Navigate to the project directory:
+
    ```bash
    cd REACT/Basic/Score-Keeper
    ```
 
 2. Install dependencies:
+
    ```bash
    npm install
    ```
 
 3. Start the development server:
+
    ```bash
    npm run dev
    ```
@@ -73,6 +76,7 @@ src/
 ## Learning Objectives
 
 This project demonstrates:
+
 - React state management with useState
 - Array manipulation in React state
 - Component props and default values
