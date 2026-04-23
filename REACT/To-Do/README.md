@@ -1,53 +1,126 @@
-# Getting Started with Create React App
+# To-Do App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, animated To-Do application built with React, Redux Toolkit, and Framer Motion.
+
+## Features
+
+- **Add Todos**: Create new to-do items with a simple input field
+- **Edit Todos**: Double-click or use the edit button to modify existing todos
+- **Complete Todos**: Mark todos as completed with a checkmark
+- **Remove Todos**: Delete todos with the remove button
+- **Filter Todos**: View active, completed, or all todos with filter buttons
+- **Smooth Animations**: Beautiful animations powered by Framer Motion
+- **Responsive Design**: Works on desktop and mobile devices
+
+## Technologies Used
+
+- **React**: Frontend framework for building the user interface
+- **Redux Toolkit**: State management for handling todo data
+- **Framer Motion**: Animation library for smooth UI transitions
+- **React Icons**: Icon library for buttons and UI elements
+- **CSS**: Custom styling with gradients and modern design
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v14 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone <repository-url>
+   cd todo-app
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+
+   ```bash
+   npm start
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Project Structure
+
+```
+src/
+├── components/
+│   ├── Todos.js          # Input component for adding new todos
+│   ├── DisplayTodos.js   # Container for displaying and filtering todos
+│   └── TodoItem.js       # Individual todo item component
+├── redux/
+│   ├── store.js          # Redux store configuration
+│   └── reducer.js        # Todo state management logic
+├── css/
+│   └── main.css          # Main stylesheet
+├── App.js                # Main application component
+└── index.js              # Application entry point
+```
 
 ## Available Scripts
 
-In the project directory, you can run:
+- `npm start` - Runs the app in development mode
+- `npm test` - Launches the test runner
+- `npm run build` - Builds the app for production
+- `npm run eject` - Ejects from Create React App (irreversible)
 
-### `npm start`
+## Usage
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. **Adding a Todo**: Type in the input field and click the + button or press Enter
+2. **Editing a Todo**: Click the edit icon or double-click the text to edit inline
+3. **Completing a Todo**: Click the green checkmark to mark as completed
+4. **Removing a Todo**: Click the red X to delete the todo
+5. **Filtering Todos**: Use the Active, Completed, or All buttons to filter the view
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## State Management
 
-### `npm test`
+The app uses Redux Toolkit for state management with the following actions:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- `addTodos`: Adds a new todo to the state
+- `removeTodos`: Removes a todo by ID
+- `updateTodos`: Updates a todo's text
+- `completeTodos`: Marks a todo as completed
 
-### `npm run build`
+## Animations
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Framer Motion is used throughout the app for:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Page entrance animations
+- Button hover and tap effects
+- Todo item slide-in/out animations
+- Filter button interactions
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Styling
 
-### `npm run eject`
+The app features:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Gradient background (green to dark green)
+- Custom font (RocknRoll One)
+- Card-based layout for todos
+- Responsive design
+- Dark theme with light text
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Contributing
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test thoroughly
+5. Submit a pull request
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## License
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+This project is licensed under the MIT License.
 
 ### Analyzing the Bundle Size
 
