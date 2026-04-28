@@ -1,0 +1,97 @@
+/* Page container */
+.container {
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Page title */
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+/* Add button */
+.add-btn {
+  margin-bottom: 20px;
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: none;
+  background-color: #222;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.add-btn:hover {
+  opacity: 0.85;
+}
+
+/* Card layout */
+.card {
+  border: 1px solid #e2e2e2;
+  padding: 16px;
+  margin-bottom: 16px;
+  border-radius: 10px;
+  background-color: white;
+  transition: 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* Card content */
+.card-title {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.card-location {
+  font-size: 14px;
+  color: #666;
+}
+
+.card-price {
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+/* Buttons */
+.btn {
+  flex: 1;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s ease;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #0062cc;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #b02a37;
+}

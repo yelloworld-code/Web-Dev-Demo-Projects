@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { campgrounds } from "../data/seeds";
+import "./CamgroundDetail.css";
 
 export default function CampgroundDetail() {
   const { id } = useParams();
@@ -11,10 +12,19 @@ export default function CampgroundDetail() {
   }
 
   return (
-    <div style={{ padding: "20px" }}>
-      <h1>{campground.title}</h1>
-      <p>{campground.location}</p>
-      <p>₹{campground.price}</p>
+    <div className="detail-container">
+      <div className="detail-card">
+        <h1 className="detail-title">{campground.title}</h1>
+        <p className="detail-location">{campground.location}</p>
+        <p className="detail-price">₹{campground.price}</p>
+
+        <button
+          onClick={() => window.history.back()}
+          className="detail-back"
+        >
+          Back
+        </button>
+      </div>
     </div>
   );
 }

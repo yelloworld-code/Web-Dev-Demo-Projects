@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useState } from "react";
 import { campgrounds as seedData } from "../data/seeds";
 import type { Campground } from "../data/seeds";
+import "./Camgrounds.css";
 
 export default function Campgrounds() {
   const [campgrounds, setCampgrounds] = useState<Campground[]>(seedData);
@@ -22,33 +23,25 @@ export default function Campgrounds() {
   };
 
   return (
-    <div style={{ padding: "20px" }}>
-      <h1>Campgrounds</h1>
+    <div className="container">
+      <h1 className="title">Campgrounds</h1>
 
-      <button onClick={addCampground} style={{ marginBottom: "16px" }}>
+      <button onClick={addCampground} className="add-btn">
         Add Campground
       </button>
 
       {campgrounds.map((camp) => (
-        <div
-          key={camp._id}
-          style={{
-            border: "1px solid #ccc",
-            padding: "12px",
-            marginBottom: "10px",
-            borderRadius: "8px",
-          }}
-        >
-          <h2>{camp.title}</h2>
-          <p>{camp.location}</p>
-          <p>₹{camp.price}</p>
+        <div key={camp._id} className="card">
+          <h2 className="card-title">{camp.title}</h2>
+          <p className="card-location">{camp.location}</p>
+          <p className="card-price">₹{camp.price}</p>
 
-          <div style={{ display: "flex", gap: "10px", marginTop: "8px" }}>
+          <div className="actions">
             <Link to={`/campgrounds/${camp._id}`}>
-              <button>View Details</button>
+              <button className="btn btn-primary">View Details</button>
             </Link>
 
-            <button onClick={() => deleteCampground(camp._id)}>
+            <button onClick={() => deleteCampground(camp._id)} className="btn btn-danger">
               Delete
             </button>
           </div>
