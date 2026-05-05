@@ -1,6 +1,7 @@
 # Web-Dev-Demo-Projects
 
-A collection of web development projects showcasing different technologies and concepts. This repository contains demo applications and websites built with various frameworks and styling approaches.
+This repository documents my hands-on learning across various web development concepts and technologies.
+While the implementations are my own, designs and concepts are based on course material and are not claimed as original work.
 
 ## Projects
 
