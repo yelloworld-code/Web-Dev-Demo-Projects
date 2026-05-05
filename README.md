@@ -63,6 +63,12 @@ Frontend applications built with React.
 - **Score-Keeper**
   - Simple score-tracking app demonstrating React basics.
 
+- **Tic-Tac-Toe**
+  - Classic two-player board game with turn-based play, win/draw detection, editable player names, and reset functionality.
+
+- **Investment Calculator**
+  - Financial growth calculator that projects future value using initial investment, annual contributions, expected return, and duration.
+
 ## Technologies Covered
 
 - **Frontend**: React, Redux, Axios, Framer Motion
