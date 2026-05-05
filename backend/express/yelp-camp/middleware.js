@@ -4,9 +4,9 @@ const { campgroundSchema, reviewSchema } = require("./schemas.js"); //for valida
 // const LocalStrategy = require('passport-local');
 // const User = require('./models/user'); //for authentication, we are using passport and passport-local-mongoose, check models/user.js for more details
 
-const ExpressError = require("./utils/ExpressError");
-const Campground = require("./models/campground");
-const Review = require("./models/review");
+const ExpressError = require("./utils/ExpressError.js");
+const Campground = require("./models/campground.js");
+const Review = require("./models/review.js");
 
 //If any of these authentications fail, notice that we not just redirecting, but returning it, so that next() isn't called
 //In case of authentication failure, this prevents the next middleware from being called
