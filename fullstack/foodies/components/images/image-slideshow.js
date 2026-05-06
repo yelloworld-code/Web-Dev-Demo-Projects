@@ -1,4 +1,4 @@
-'use client';
+'use client'; // This component is a client component because it uses useState and useEffect
 
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
