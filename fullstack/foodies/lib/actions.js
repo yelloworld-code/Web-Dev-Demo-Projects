@@ -39,5 +39,12 @@ export async function shareMeal(prevState, formData) { //prevState is the state 
 
 	// Save meal to "database"
 	await saveMeal(meal);
+
+	revalidatePath("/meals");
+	// revalidatePath("/meals", "layout");
+	// Revalidate the meals page to show the new meal, 
+	// without 'layout' it will only revalidate the meals page, 
+	// but with 'layout' it will also revalidate the layout which is necessary to show the new meal in the sidebar
+
 	redirect("/meals");
 }
