@@ -9,3 +9,7 @@ export async function getMeals() {
 	//.get() would return only the first row, and .run() is used for insert/update/delete operations
 	//.run() returns an object with information about the operation, but not the data itself
 }
+
+export function getMeal(slug) {
+	return db.prepare("SELECT * FROM meals WHERE slug = ?").get(slug);
+}
