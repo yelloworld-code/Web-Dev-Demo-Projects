@@ -4,11 +4,14 @@ import { redirect } from "next/navigation";
 
 import { saveMeal } from "./meals";
 
+// Helper function to validate text input
 function isInvalidText(text) {
 	return !text || text.trim() === "";
 }
 
-export async function shareMeal(formData) {
+
+// Server action to handle meal sharing form submission
+export async function shareMeal(prevState, formData) { //prevState is the state passed from the client, formData is the data from the form submission
 	const meal = {
 		title: formData.get("title"),
 		summary: formData.get("summary"),
@@ -18,6 +21,7 @@ export async function shareMeal(formData) {
 		creator_email: formData.get("email"),
 	};
 
+	// Basic validation
 	if (
 		isInvalidText(meal.title) ||
 		isInvalidText(meal.summary) ||
@@ -28,9 +32,12 @@ export async function shareMeal(formData) {
 		!meal.image ||
 		meal.image.size === 0
 	) {
-		throw new Error("Invalid input");
+		return {
+			message: "Invalid input. Please fill in all fields correctly.",
+		};
 	}
 
+	// Save meal to "database"
 	await saveMeal(meal);
 	redirect("/meals");
 }
