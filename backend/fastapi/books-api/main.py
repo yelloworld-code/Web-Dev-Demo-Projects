@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Body
 
 app = FastAPI()
 
@@ -36,3 +36,20 @@ async def read_category_by_query(category: str):
         if book.get('category').casefold() == category.casefold():
             books_to_return.append(book)
     return books_to_return
+
+@app.get('/books/byauthor/')
+async def read_author_category_by_query(author: str, category: str):
+    #This endpoint allows us to filter books by both author and category using query parameters.
+    books_to_return = []
+    for book in BOOKS:
+        if book.get('author').casefold() == author.casefold() and \
+                book.get('category').casefold() == category.casefold():
+            books_to_return.append(book)
+    return books_to_return
+
+@app.post('/books/create_book')
+async def create_book(new_book=Body()):
+    #This endpoint allows us to create a new book by sending a JSON payload in the request body.
+    #Body() is used to indicate that the new_book parameter should be read from the request body.
+    BOOKS.append(new_book)
+    return {"message": "Book created successfully.", "book": new_book}
