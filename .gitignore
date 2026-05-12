@@ -77,6 +77,10 @@ typings/
 .env.test.local
 .env.production.local
 
+# SQLite / local database files
+*.db
+*.sqlite3
+
 # Python / FastAPI
 __pycache__/
 venv/
