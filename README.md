@@ -7,7 +7,7 @@ While the implementations are my own, designs and concepts are based on course m
 
 ### Backend
 
-Backend applications with Express.js and MongoDB.
+Backend applications with Express.js, MongoDB, and FastAPI.
 
 - **Express**
   - **auth-demo**
@@ -16,6 +16,11 @@ Backend applications with Express.js and MongoDB.
     - Full-stack blog app with RESTful CRUD operations, MongoDB, and EJS templating.
   - **yelp-camp**
     - Campground review site with user authentication, reviews, and image uploads using Express, MongoDB, and EJS.
+- **FastAPI**
+  - **books-api**
+    - FastAPI book collection API with filterable routes and JSON create/update/delete operations.
+  - **database&auth**
+    - Minimal FastAPI starter app with a root endpoint, ready to extend for database and authentication demos.
 
 ### Frontend
 
@@ -55,6 +60,8 @@ Frontend applications and static templates.
 
 Full-stack applications combining frontend and backend.
 
+- **foodies**
+  - Recipe sharing community built with Next.js and SQLite, featuring meal browsing, recipe submission, and image upload.
 - **yelp-camp-react**
   - Campground review site built with React frontend and Express/MongoDB backend.
 
@@ -70,10 +77,10 @@ Quick reference materials and cheatsheets.
 
 ## Technologies Covered
 
-- **Frontend**: React, Redux Toolkit, Axios, Framer Motion, Bootstrap, CSS, SASS
-- **Backend**: Express.js, MongoDB, Mongoose
+- **Frontend**: React, Redux Toolkit, Axios, Framer Motion, Bootstrap, CSS, SASS, Next.js
+- **Backend**: Express.js, MongoDB, Mongoose, FastAPI, Python, SQLite
 - **Styling**: CSS, SASS, Bootstrap, Material UI
-- **Tools**: Node.js, npm, Vite, live-server
+- **Tools**: Node.js, npm, Vite, live-server, uvicorn
 
 ## Getting Started
 
@@ -90,10 +97,13 @@ Check individual project READMEs for details.
 ```
 Web-Dev-Demo-Projects/
 ├── backend/
-│   └── express/
-│       ├── auth-demo/
-│       ├── blog-site/
-│       └── yelp-camp/
+│   ├── express/
+│   │   ├── auth-demo/
+│   │   ├── blog-site/
+│   │   └── yelp-camp/
+│   └── fastapi/
+│       ├── books-api/
+│       └── database&auth/
 ├── frontend/
 │   ├── bootstrap/
 │   │   ├── Candy_Museum/
@@ -111,6 +121,7 @@ Web-Dev-Demo-Projects/
 │       ├── Tic-Tac-Toe/
 │       └── To-Do/
 ├── fullstack/
+│   ├── foodies/
 │   └── yelp-camp-react/
 ├── resources/
 │   └── cheatsheets/
