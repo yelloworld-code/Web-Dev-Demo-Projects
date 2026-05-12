@@ -1,0 +1,15 @@
+from fastapi import FastAPI
+import models
+from database import engine
+
+app = FastAPI()
+
+models.Base.metadata.create_all(bind=engine) 
+# This line creates all the tables defined in your SQLAlchemy models in the database. 
+# The create_all method is called on the metadata of the Base class, which is the base class for all your models. 
+# The bind parameter specifies the database engine to use for creating the tables. 
+# In this case, it uses the engine that was created in the database.py file, which is connected to the SQLite database specified in the SQLALCHEMY_DATABASE_URL variable.
+
+@app.get("/")
+async def root():
+    return {"message": "Hello World"} 
